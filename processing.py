@@ -185,9 +185,15 @@ ax5.plot(longChronYears, longChronReconstruction, color = "turquoise", linestyle
 ax5.plot(longChronYears, longChronGaussian, color = "mediumpurple", label = f"Gaussian with σ = {sigma}")
 
 ax5.set(ylabel = "Reconstructed Temperature (°C)", xlabel = "Year (CE)", title = "Long Chronology Temperature Reconstruction")
+ax5.vlines([-3580, -1610, 431, 1257, 1815], 6, 16.4, label = "VEI 7 volcanic eruptions", color = "firebrick")
+ax5.annotate("Tambora", (1820, 6.5))
+ax5.annotate("Samalas", (1262, 6.5))
+ax5.annotate("Ilopango", (436, 6.5))
+ax5.annotate("Santorini", (-1605, 6.5))
+ax5.annotate("Talisay Caldera", (-3575, 6.5))
 ax5.grid()
 ax5.legend()
-#plt.show()
+plt.show()
 plt.close()
 
 ## Comparison of Long Chronology with Gathered Data Reconstructed Temperatures

@@ -24,7 +24,7 @@ for n in years:
     maxArray = np.append(maxArray, maximum)
     averageArray = np.append(averageArray, average)
     index += 1
-    #print(f'{n:.0f}: \tmin. = {minimum}\t|\tmax. = {maximum}\t|\taverage = {average:.3f}')
+    print(f'{n:.0f}: \tmin. = {minimum}\t|\tmax. = {maximum}\t|\taverage = {average:.3f}')
 
 fullAverage = runningSum / (np.shape(years)[0] * 12)
 print(f'Average temp. throughout whole time period: {fullAverage:.2f}°C')
@@ -36,6 +36,8 @@ ax.plot(years, maxArray)
 #plt.show()
 plt.close()
 
+print(min(minArray))
+print(max(maxArray))
 
 monthlyAverages = []
 index = 1
